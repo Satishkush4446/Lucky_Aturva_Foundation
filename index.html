@@ -2,7 +2,7 @@
 <html lang="hi">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="%BASE_URL%president-clean.jpg" />
+    <link rel="icon" type="image/jpeg" href="/Lucky_Aturva_Foundation/president-clean.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary SEO Meta Tags -->
@@ -17,7 +17,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="लक्की अतुल्य फाउंडेशन | Lucky Atulya Foundation" />
     <meta property="og:description" content="सेवा ही संकल्प है, कर्म ही पूजा है। जसराना, फिरोजाबाद (उत्तर प्रदेश) में निःस्वार्थ सामाजिक सेवा और जन-कल्याण हेतु समर्पित संस्था।" />
-    <meta property="og:image" content="%BASE_URL%president-portrait.jpg" />
+    <meta property="og:image" content="/Lucky_Aturva_Foundation/president-portrait.jpg" />
     <meta property="og:locale" content="hi_IN" />
 
     <!-- Twitter Meta -->
@@ -61,11 +61,29 @@
       }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+
+    <!-- Production CSS for direct GitHub Pages static hosting -->
+    <link rel="stylesheet" href="/Lucky_Aturva_Foundation/assets/index.css">
   </head>
   <body class="bg-[#F7F5EF] text-[#202A25] font-sans antialiased selection:bg-[#D89A35]/30 selection:text-[#174B3B]">
     <!-- Hidden container for Google Translate engine with strictly Hindi & English -->
     <div id="google_translate_element" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true"></div>
     <div id="root"></div>
+
+    <!-- Production Compiled Bundle for direct GitHub Pages serving -->
+    <script type="text/javascript">
+      (function() {
+        if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+          var s = document.createElement('script');
+          s.type = 'module';
+          s.crossOrigin = 'anonymous';
+          s.src = '/Lucky_Aturva_Foundation/assets/index.js';
+          document.body.appendChild(s);
+        }
+      })();
+    </script>
+
+    <!-- Development Source Entry for Vite dev server & compiler -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
