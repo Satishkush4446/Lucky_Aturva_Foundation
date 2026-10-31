@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    top: 0px !important;
+    position: static !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    font-size: clamp(1rem, 1.1vw, 1.125rem); /* 16px to 18px body font */
+    line-height: 1.75; /* Comfortable reading for elderly visitors */
+    color: #202A25;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    font-feature-settings: "kern" 1;
+  }
+}
+
+/* Fluid Typography Utilities */
+.text-hero-fluid {
+  font-size: clamp(2.125rem, 4.5vw, 3.25rem); /* 34px to 52px */
+  line-height: 1.25;
+}
+
+.text-section-fluid {
+  font-size: clamp(1.75rem, 3vw, 2.375rem); /* 28px to 38px */
+  line-height: 1.3;
+}
+
+.text-card-fluid {
+  font-size: clamp(1.3125rem, 1.5vw, 1.4375rem); /* 21px to 23px */
+  line-height: 1.35;
+}
+
+.text-body-fluid {
+  font-size: clamp(1rem, 1.1vw, 1.125rem); /* 16px to 18px */
+  line-height: 1.75;
+}
+
+.text-lead-fluid {
+  font-size: clamp(1.125rem, 1.25vw, 1.25rem); /* 18px to 20px */
+  line-height: 1.8;
+}
+
+/* Custom styling for Google Translate element */
+#google_translate_element {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.goog-te-combo {
+  background-color: #FFFFFF !important;
+  color: #174B3B !important;
+  border: 1px solid rgba(216, 154, 53, 0.5) !important;
+  border-radius: 9999px !important;
+  padding: 3px 24px 3px 10px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+  font-family: 'Noto Sans Devanagari', -apple-system, sans-serif !important;
+}
+
+.goog-te-combo:hover, .goog-te-combo:focus {
+  border-color: #D89A35 !important;
+  box-shadow: 0 2px 6px rgba(216, 154, 53, 0.25) !important;
+}
+
+.goog-te-gadget-simple {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(216, 154, 53, 0.4) !important;
+  padding: 4px 10px !important;
+  border-radius: 9999px !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.25rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.goog-te-gadget-simple:hover {
+  border-color: #D89A35 !important;
+  background-color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(216, 154, 53, 0.2) !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value {
+  color: #174B3B !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span {
+  border-left: none !important;
+  font-family: inherit !important;
+}
+
+.goog-te-gadget-simple img {
+  display: inline-block !important;
+  margin-right: 4px !important;
+  vertical-align: middle !important;
+}
+
+/* Prevent Google Translate banner and invisible overlay from intercepting clicks or pushing layout */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+iframe.VIpgJd-ZVi9od-ORHb-OEVmcd,
+iframe[id*=":1"],
+iframe[id*=":2"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Ensure Google Translate injected iframes do not block clicks */
+body > .skiptranslate:not(.goog-te-gadget) {
+  pointer-events: none !important;
+}
+
+/* Hide Google attribution text if needed, maintaining legal widget visibility */
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+  font-size: 0px !important;
+}
+
+.goog-te-gadget .goog-te-gadget-simple {
+  font-size: 13px !important;
+}
+
+/* Subtle Indian Decorative Patterns */
+.bg-mandala-pattern {
+  background-color: #F7F5EF;
+  background-image: radial-gradient(rgba(23, 75, 59, 0.04) 1px, transparent 1px), radial-gradient(rgba(216, 154, 53, 0.04) 1px, #F7F5EF 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+.bg-ornament-gold {
+  background: linear-gradient(135deg, rgba(216, 154, 53, 0.12) 0%, rgba(216, 154, 53, 0.02) 100%);
+}
+
