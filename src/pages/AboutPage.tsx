@@ -61,15 +61,21 @@ export const AboutPage: React.FC = () => {
           <Breadcrumbs items={[{ label: 'हमारे बारे में' }]} />
           
           <div className="mt-4 max-w-3xl space-y-3">
-            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-brand-gold-500/20 text-brand-gold-300 border border-brand-gold-400/40">
-              <Sparkles className="w-4 h-4" />
-              <span>संस्था परिचय एवं संकल्प</span>
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-brand-gold-500/20 text-brand-gold-300 border border-brand-gold-400/40">
+                <Sparkles className="w-3.5 h-3.5 text-brand-gold-400" />
+                <span>{foundationData.tagline1}</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-emerald-200 border border-emerald-400/30">
+                <HeartHandshake className="w-3.5 h-3.5 text-emerald-300" />
+                <span>{foundationData.tagline2}</span>
+              </span>
+            </div>
             <h1 className="text-[clamp(2.125rem,4vw,3.25rem)] font-serif font-bold text-white leading-[1.25]">
               हमारे बारे में (About Us)
             </h1>
             <p className="text-body-fluid text-white/90 leading-[1.8]">
-              {foundationData.tagline} — जसराना एवं फिरोजाबाद में निस्वार्थ भाव से समाज के वंचित, वृद्ध, असहाय परिवारों और गौ माता की सेवा हेतु समर्पित संस्था।
+              {foundationData.tagline1} {foundationData.tagline2} — जसराना एवं फिरोजाबाद में निस्वार्थ भाव से समाज के वंचित, वृद्ध, असहाय परिवारों और गौ माता की सेवा हेतु समर्पित संस्था।
             </p>
           </div>
         </div>
@@ -95,10 +101,24 @@ export const AboutPage: React.FC = () => {
                   ग्रामीण एवं कस्बाई अंचलों में आज भी अनेक ऐसे परिवार हैं जो आवश्यक सरकारी योजनाओं, समय पर स्वास्थ्य सेवाओं और सामाजिक संबल के अभाव में कठिनाइयों से जूझते हैं। अनेक वृद्ध नागरिक और विधवा माताएं केवल जानकारी या आवेदन प्रक्रिया की जटिलता के कारण पेंशन से वंचित रह जाती हैं।
                 </p>
                 <p>
-                  इसी पीड़ा को अनुभव करते हुए <strong>लक्की अतुर्वा फाउंडेशन</strong> की नींव रखी गई। संस्था का मुख्य उद्देश्य किसी व्यावसायिक या राजनीतिक मंशा से परे रहकर केवल और केवल मानवीय सेवा को धरातल पर उतारना है।
+                  इसी पीड़ा को अनुभव करते हुए <strong>{foundationData.hindiName}</strong> की नींव रखी गई। संस्था का मुख्य उद्देश्य किसी व्यावसायिक या राजनीतिक मंशा से परे रहकर केवल और केवल मानवीय सेवा को धरातल पर उतारना है।
                 </p>
                 <p>
                   हमारा दृढ़ विश्वास है कि जब तक समाज के प्रत्येक कमजोर व्यक्ति के आंसू पोंछने वाला कोई हाथ आगे नहीं आता, तब तक समाज का संपूर्ण विकास संभव नहीं है। परानपुर मोड़ (जसराना) स्थित हमारे केंद्र से हम निरंतर लोगों की समस्याओं को सुनकर उचित मार्गदर्शन और प्रत्यक्ष सहयोग प्रदान कर रहे हैं।
+                </p>
+              </div>
+
+              {/* Prominent Organizational Commitment Statement */}
+              <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-brand-gold-500/15 via-[#F5EBDD] to-brand-green-50 border-l-4 border-brand-gold-500 border-y border-r border-stone-200/90 shadow-sm space-y-2">
+                <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-brand-gold-800 uppercase tracking-wider">
+                  <ShieldCheck className="w-4 h-4 text-brand-green-800 shrink-0" />
+                  <span>संस्था का मुख्य संकल्प पत्र (Our Core Commitment)</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-brand-green-950 leading-snug">
+                  "{foundationData.commitmentStatement}"
+                </h3>
+                <p className="text-[15px] sm:text-[16px] text-stone-700 leading-[1.75]">
+                  फाउंडेशन का प्रत्येक कार्यकर्ता, स्वयंसेवक और पदाधिकारी इस बात के लिए वचनबद्ध है कि पीड़ित, वृद्ध एवं निर्धन बंधु को हर परिस्थिति में सच्चा मार्गदर्शन, संबल और सहायता उपलब्ध कराई जाएगी।
                 </p>
               </div>
 
@@ -252,7 +272,7 @@ export const AboutPage: React.FC = () => {
                   अध्यक्षीय संदेश
                 </span>
                 <h2 className="text-section-fluid font-serif font-bold text-brand-green-950 leading-[1.3]">
-                  "सेवा ही संकल्प है, कर्म ही पूजा है"
+                  "{foundationData.tagline1} {foundationData.tagline2}"
                 </h2>
                 
                 <div className="p-5 sm:p-6 rounded-2xl bg-brand-gold-50/80 border border-brand-gold-300/80 text-stone-900 font-serif text-[17px] sm:text-lg italic leading-[1.75]">
@@ -338,7 +358,7 @@ export const AboutPage: React.FC = () => {
               हमारे मूल संस्कार एवं मूल्य (Core Values)
             </h2>
             <p className="text-body-fluid text-stone-700 leading-[1.8]">
-              लक्की अतुर्वा फाउंडेशन का प्रत्येक स्वयंसेवक इन्हीं आदर्शों को आत्मसात कर जनसेवा में तत्पर रहता है।
+              {foundationData.hindiName} का प्रत्येक स्वयंसेवक इन्हीं आदर्शों को आत्मसात कर जनसेवा में तत्पर रहता है।
             </p>
           </div>
 
@@ -365,13 +385,13 @@ export const AboutPage: React.FC = () => {
       <section className="py-16 sm:py-24 bg-[#174B3B] text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-brand-gold-300 bg-white/10 px-4 py-1.5 rounded-full border border-white/15">
-            हमारा वचन
+            हमारा संकल्प एवं वचन (Our Commitment)
           </span>
-          <h2 className="text-section-fluid font-serif font-bold text-white leading-[1.3]">
-            समाज के प्रति हमारी अटूट प्रतिबद्धता
+          <h2 className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-serif font-bold text-brand-gold-300 leading-[1.3]">
+            "{foundationData.commitmentStatement}"
           </h2>
           <p className="text-body-fluid text-white/90 leading-[1.8] max-w-3xl mx-auto">
-            हम वादा करते हैं कि फाउंडेशन का प्रत्येक प्रयास केवल समाजहित और जनकल्याण के लिए होगा। हम किसी भी झूठे प्रचार या गैर-वास्तविक दावों से दूर रहकर धरातल पर सच्चे मन से लोगों की सेवा करते रहेंगे।
+            {foundationData.tagline1} {foundationData.tagline2} हम वादा करते हैं कि फाउंडेशन का प्रत्येक प्रयास केवल समाजहित, वृद्ध कल्याण, बहन-बेटियों के सम्मान और पवित्र गौ सेवा के लिए समर्पित रहेगा। हम निष्पक्ष एवं पारदर्शी सेवा के साथ आपके साथ खड़े हैं।
           </p>
           <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
             <Link

@@ -61,15 +61,21 @@ export const ContactPage: React.FC = () => {
           <Breadcrumbs items={[{ label: 'संपर्क करें' }]} />
           
           <div className="mt-4 max-w-3xl space-y-3">
-            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-brand-gold-500/20 text-brand-gold-300 border border-brand-gold-400/40">
-              <Sparkles className="w-4 h-4" />
-              <span>कार्यालय एवं हेल्पलाइन</span>
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-brand-gold-500/20 text-brand-gold-300 border border-brand-gold-400/40">
+                <Sparkles className="w-3.5 h-3.5 text-brand-gold-400" />
+                <span>{foundationData.tagline1}</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-emerald-200 border border-emerald-400/30">
+                <HeartHandshake className="w-3.5 h-3.5 text-emerald-300" />
+                <span>{foundationData.tagline2}</span>
+              </span>
+            </div>
             <h1 className="text-[clamp(2.125rem,4vw,3.25rem)] font-serif font-bold text-white leading-[1.25]">
               संपर्क करें (Contact Us)
             </h1>
             <p className="text-body-fluid text-white/90 leading-[1.8]">
-              {foundationData.hindiName} के परानपुर मोड़ कार्यालय पर पधारें अथवा फोन और व्हाट्सएप के माध्यम से सीधे संपर्क करें।
+              "{foundationData.commitmentStatement}" — {foundationData.hindiName} के परानपुर मोड़ कार्यालय पर पधारें अथवा फोन और व्हाट्सएप के माध्यम से सीधे संपर्क करें।
             </p>
           </div>
         </div>

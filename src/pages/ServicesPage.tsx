@@ -35,15 +35,21 @@ export const ServicesPage: React.FC = () => {
           <Breadcrumbs items={[{ label: 'हमारी सेवाएँ' }]} />
           
           <div className="mt-4 max-w-3xl space-y-3">
-            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-brand-gold-500/20 text-brand-gold-300 border border-brand-gold-400/40">
-              <Sparkles className="w-4 h-4" />
-              <span>जनकल्याणकारी सेवाएँ</span>
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-brand-gold-500/20 text-brand-gold-300 border border-brand-gold-400/40">
+                <Sparkles className="w-3.5 h-3.5 text-brand-gold-400" />
+                <span>{foundationData.tagline1}</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-emerald-200 border border-emerald-400/30">
+                <HeartHandshake className="w-3.5 h-3.5 text-emerald-300" />
+                <span>{foundationData.tagline2}</span>
+              </span>
+            </div>
             <h1 className="text-[clamp(2.125rem,4vw,3.25rem)] font-serif font-bold text-white leading-[1.25]">
               हमारी प्रमुख सेवाएँ (Our Services)
             </h1>
             <p className="text-body-fluid text-white/90 leading-[1.8]">
-              लक्की अतुर्वा फाउंडेशन समाज के वंचित, वृद्ध, असहाय परिवारों, लाचार मरीजों और बेजुबान गौवंश के कल्याण हेतु 7 प्रमुख क्षेत्रों में निःस्वार्थ सेवा प्रदान करता है।
+              "{foundationData.commitmentStatement}" — समाज के वंचित, वृद्ध, असहाय परिवारों, लाचार मरीजों और बेजुबान गौवंश के कल्याण हेतु 7 प्रमुख क्षेत्रों में निःस्वार्थ सेवा।
             </p>
           </div>
         </div>
@@ -58,7 +64,7 @@ export const ServicesPage: React.FC = () => {
             <ShieldAlert className="w-6 h-6 text-amber-700 shrink-0 mt-0.5" />
             <div className="text-[15px] sm:text-[16px] text-stone-800 leading-[1.75]">
               <strong className="text-amber-950 font-bold block mb-1">महत्वपूर्ण सूचना एवं पारदर्शी अस्वीकरण:</strong>
-              लक्की अतुर्वा फाउंडेशन एक गैर-सरकारी संस्था है जो जरूरतमंदों को सही मार्गदर्शन, आवेदन सहायता और समन्वय उपलब्ध कराती है। हम किसी भी सरकारी लाभ, पेंशन अथवा वाहन की असीमित उपलब्धता का अग्रिम या गैर-सत्यापित वादा नहीं करते। सहायता संस्था के संसाधनों एवं वास्तविक सत्यापन पर निर्भर है।
+              {foundationData.hindiName} एक गैर-सरकारी संस्था है जो जरूरतमंदों को सही मार्गदर्शन, आवेदन सहायता और समन्वय उपलब्ध कराती है। हम किसी भी सरकारी लाभ, पेंशन अथवा वाहन की असीमित उपलब्धता का अग्रिम या गैर-सत्यापित वादा नहीं करते। सहायता संस्था के संसाधनों एवं वास्तविक सत्यापन पर निर्भर है।
             </div>
           </div>
 

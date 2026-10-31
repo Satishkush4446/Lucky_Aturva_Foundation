@@ -7,15 +7,19 @@ export const TopBar: React.FC = () => {
   return (
     <div className="bg-[#0e2c22] text-white/95 text-[13.5px] sm:text-sm border-b border-brand-gold-500/25 py-2 px-4">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2.5">
-        {/* Left: Tagline & Office Location */}
-        <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-4 text-center md:text-left">
+        {/* Left: Taglines & Office Location */}
+        <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 sm:gap-3.5 text-center md:text-left">
           <span className="inline-flex items-center gap-1.5 font-bold text-brand-gold-400">
-            <Heart className="w-4 h-4 fill-brand-gold-400 text-brand-gold-400" />
-            <span className="tracking-wide">{foundationData.tagline}</span>
+            <Heart className="w-3.5 h-3.5 fill-brand-gold-400 text-brand-gold-400 shrink-0" />
+            <span className="tracking-wide">{foundationData.tagline1}</span>
+          </span>
+          <span className="text-white/40">•</span>
+          <span className="inline-flex items-center gap-1.5 font-bold text-emerald-300">
+            <span className="tracking-wide">{foundationData.tagline2}</span>
           </span>
           <span className="hidden sm:inline text-white/30">•</span>
           <span className="inline-flex items-center gap-1.5 text-white/90 font-medium">
-            <MapPin className="w-4 h-4 text-brand-gold-400 shrink-0" />
+            <MapPin className="w-3.5 h-3.5 text-brand-gold-400 shrink-0" />
             <span>{foundationData.contact.locality}, {foundationData.contact.tehsil} (फिरोजाबाद)</span>
           </span>
         </div>

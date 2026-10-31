@@ -4,7 +4,10 @@ export interface FoundationInfo {
   name: string;
   hindiName: string;
   tagline: string;
+  tagline1: string;
+  tagline2: string;
   subTagline: string;
+  commitmentStatement: string;
   quote: string;
   president: {
     name: string;
@@ -41,7 +44,10 @@ export const foundationData: FoundationInfo = {
   name: "Lucky Atulya Foundation",
   hindiName: "लक्की अतुल्य फाउंडेशन",
   tagline: "सेवा ही संकल्प है, कर्म ही पूजा है।",
-  subTagline: "हमारी संस्था आपके सहयोग के लिए कटिबद्ध है",
+  tagline1: "सेवा ही संकल्प है।",
+  tagline2: "कर्म ही पूजा है।",
+  subTagline: "हमारी संस्था आपके सहयोग के लिए कटिबद्ध है।",
+  commitmentStatement: "हमारी संस्था आपके सहयोग के लिए कटिबद्ध है।",
   quote: "अपने लिए तो सब जीते हैं, किसी और के लिए जी कर तो देखो, यकीन मानो जीने का अंदाज ही बदल जाएगा.....",
   president: {
     name: "Lodhi Devendra Singh",

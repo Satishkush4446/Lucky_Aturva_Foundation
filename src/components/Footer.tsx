@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="text-sm sm:text-[15.5px] text-white/80 leading-[1.75]">
-              {foundationData.subTagline}। जसराना, फिरोजाबाद (उत्तर प्रदेश) में निस्वार्थ भाव से जरूरतमंदों, बुजुर्गों, निराश्रित विधवाओं एवं गौवंश की सेवा में समर्पित सामाजिक संगठन।
+              {foundationData.commitmentStatement} जसराना, फिरोजाबाद (उत्तर प्रदेश) में निस्वार्थ भाव से जरूरतमंदों, बुजुर्गों, निराश्रित विधवाओं एवं गौवंश की सेवा में समर्पित सामाजिक संगठन।
             </p>
 
             <div className="pt-2 border-t border-white/10 space-y-1.5 text-sm">
@@ -243,7 +243,7 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-2.5">
             <ShieldCheck className="w-5 h-5 text-brand-gold-400 shrink-0" />
             <p>
-              <strong className="text-brand-gold-400">पारदर्शिता अस्वीकरण (Disclaimer):</strong> लक्की अतुर्वा फाउंडेशन एक गैर-सरकारी सामाजिक सेवा संगठन है। हम सरकारी योजनाओं में केवल मार्गदर्शन एवं समन्वय प्रदान करते हैं; किसी भी योजना की अंतिम पात्रता व लाभ सरकारी नियमानुसार ही मान्य होता है।
+              <strong className="text-brand-gold-400">पारदर्शिता अस्वीकरण (Disclaimer):</strong> {foundationData.hindiName} एक गैर-सरकारी सामाजिक सेवा संगठन है। हम सरकारी योजनाओं में केवल मार्गदर्शन एवं समन्वय प्रदान करते हैं; किसी भी योजना की अंतिम पात्रता व लाभ सरकारी नियमानुसार ही मान्य होता है।
             </p>
           </div>
           <div className="shrink-0 text-white/75 font-medium">

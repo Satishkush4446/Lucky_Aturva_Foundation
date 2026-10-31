@@ -163,6 +163,13 @@ export const Header: React.FC = () => {
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-b border-stone-200 px-4 pt-3 pb-6 space-y-4 animate-in slide-in-from-top-4">
+          {/* Mobile Taglines Pill */}
+          <div className="flex items-center justify-center gap-2 py-1.5 px-3 rounded-lg bg-[#F5EBDD] border border-brand-gold-300 text-xs font-bold text-brand-green-950">
+            <span className="text-brand-gold-800">{foundationData.tagline1}</span>
+            <span className="text-stone-400">•</span>
+            <span className="text-brand-green-800">{foundationData.tagline2}</span>
+          </div>
+
           <div className="py-2.5 border-b border-stone-100 flex items-center justify-between">
             <span className="text-sm font-semibold text-brand-green-800">भाषा / Language:</span>
             <GoogleTranslateWidget variant="light" compact />

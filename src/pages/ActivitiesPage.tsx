@@ -50,15 +50,21 @@ export const ActivitiesPage: React.FC = () => {
           <Breadcrumbs items={[{ label: 'गतिविधियाँ' }]} />
           
           <div className="mt-4 max-w-3xl space-y-3">
-            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-brand-gold-500/20 text-brand-gold-300 border border-brand-gold-400/40">
-              <Sparkles className="w-4 h-4" />
-              <span>सामाजिक सरोकार एवं सहभागिता</span>
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-brand-gold-500/20 text-brand-gold-300 border border-brand-gold-400/40">
+                <Sparkles className="w-3.5 h-3.5 text-brand-gold-400" />
+                <span>{foundationData.tagline1}</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-emerald-200 border border-emerald-400/30">
+                <HeartHandshake className="w-3.5 h-3.5 text-emerald-300" />
+                <span>{foundationData.tagline2}</span>
+              </span>
+            </div>
             <h1 className="text-[clamp(2.125rem,4vw,3.25rem)] font-serif font-bold text-white leading-[1.25]">
               सामाजिक गतिविधियाँ (Activities & Community Work)
             </h1>
             <p className="text-body-fluid text-white/90 leading-[1.8]">
-              लक्की अतुर्वा फाउंडेशन द्वारा जसराना एवं फिरोजाबाद क्षेत्र में संचालित सामुदायिक सेवा, स्वास्थ्य मार्गदर्शन, गौ संरक्षण एवं धार्मिक सहभागिता के प्रमुख आयाम।
+              "{foundationData.commitmentStatement}" — लक्की अतुल्य फाउंडेशन द्वारा जसराना एवं फिरोजाबाद क्षेत्र में संचालित सामुदायिक सेवा, स्वास्थ्य मार्गदर्शन, गौ संरक्षण एवं धार्मिक सहभागिता के प्रमुख आयाम।
             </p>
           </div>
         </div>
@@ -229,7 +235,7 @@ export const ActivitiesPage: React.FC = () => {
                 जसराना कार्यालय पर पधारें
               </h2>
               <p className="text-body-fluid text-stone-700 leading-[1.8]">
-                लक्की अतुर्वा फाउंडेशन का कार्यालय परानपुर मोड़, जसराना (फिरोजाबाद) में स्थित है। हमारे केंद्र पर आकर आप संस्था की गतिविधियों, आगामी सेवा कार्यों और सहायता कार्यक्रमों की प्रत्यक्ष जानकारी प्राप्त कर सकते हैं।
+                {foundationData.hindiName} का कार्यालय परानपुर मोड़, जसराना (फिरोजाबाद) में स्थित है। हमारे केंद्र पर आकर आप संस्था की गतिविधियों, आगामी सेवा कार्यों और सहायता कार्यक्रमों की प्रत्यक्ष जानकारी प्राप्त कर सकते हैं।
               </p>
               <div className="pt-2">
                 <a

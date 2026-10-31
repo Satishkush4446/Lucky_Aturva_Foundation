@@ -13,7 +13,8 @@ import {
   Ambulance, 
   Sparkles,
   Award,
-  ChevronRight
+  ChevronRight,
+  Quote
 } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 import { ServiceCard } from '../components/ServiceCard';
@@ -53,10 +54,16 @@ export const HomePage: React.FC = () => {
             {/* Left Content Column */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               
-              {/* Auspicious Tagline Pill */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-brand-gold-400/40 text-sm sm:text-[15px] font-bold text-brand-gold-300">
-                <Sparkles className="w-4 h-4 text-brand-gold-400 animate-pulse" />
-                <span>{foundationData.tagline}</span>
+              {/* Official Supporting Taglines */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-brand-gold-400/50 text-sm sm:text-[15px] font-bold text-brand-gold-300 shadow-sm">
+                  <Sparkles className="w-4 h-4 text-brand-gold-400 animate-pulse shrink-0" />
+                  <span>{foundationData.tagline1}</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-brand-gold-400/40 text-sm sm:text-[15px] font-bold text-brand-gold-300 shadow-sm">
+                  <HeartHandshake className="w-4 h-4 text-brand-gold-400 shrink-0" />
+                  <span>{foundationData.tagline2}</span>
+                </div>
               </div>
 
               {/* Main Headline (Hero Fluid: 34px - 52px) */}
@@ -205,12 +212,26 @@ export const HomePage: React.FC = () => {
               </h2>
 
               <p className="text-body-fluid text-stone-700 leading-[1.8]">
-                लक्की अतुर्वा फाउंडेशन की स्थापना परानपुर मोड़, जसराना (फिरोजाबाद, उत्तर प्रदेश) में समाज के अंतिम पायदान पर खड़े असहाय नागरिकों के दुख-दर्द को बांटने और उन्हें हर संभव सहायता पहुंचाने के उद्देश्य से की गई है।
+                {foundationData.hindiName} की स्थापना परानपुर मोड़, जसराना (फिरोजाबाद, उत्तर प्रदेश) में समाज के अंतिम पायदान पर खड़े असहाय नागरिकों के दुख-दर्द को बांटने और उन्हें हर संभव सहायता पहुंचाने के उद्देश्य से की गई है।
               </p>
 
               <p className="text-body-fluid text-stone-700 leading-[1.8]">
                 हमारा विश्वास है कि सच्चा धर्म और कर्म वही है जो किसी रोते हुए चेहरे पर मुस्कान ला सके। अध्यक्ष <strong>श्री लोधी देवेंद्र सिंह जी</strong> के नेतृत्व में हमारी टीम बुजुर्गों की पेंशन सहायता, एम्बुलेंस समन्वय, निर्धन बेटियों के विवाह में सहयोग, स्वास्थ्य मार्गदर्शन और पवित्र गौ सेवा में सक्रिय रूप से जुटी हुई है।
               </p>
+
+              {/* Main Organizational Commitment Statement */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-brand-gold-500/10 via-[#F5EBDD]/70 to-brand-green-50 border-l-4 border-brand-gold-500 border-y border-r border-stone-200/90 shadow-sm space-y-1.5">
+                <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-brand-gold-800 uppercase tracking-wider">
+                  <ShieldCheck className="w-4 h-4 text-brand-green-800 shrink-0" />
+                  <span>फाउंडेशन का मुख्य संकल्प (Organizational Commitment)</span>
+                </div>
+                <p className="text-lg sm:text-xl font-serif font-bold text-brand-green-950 leading-snug">
+                  "{foundationData.commitmentStatement}"
+                </p>
+                <p className="text-[14.5px] sm:text-[15.5px] text-stone-700 leading-[1.7]">
+                  हमारा प्रत्येक प्रयास समाज के जरूरतमंद, वृद्ध एवं निर्धन बंधुओं के जीवन में खुशहाली और सम्मान लौटाने के लिए पूर्ण निष्ठा से समर्पित है।
+                </p>
+              </div>
 
               <div className="pt-2 flex flex-wrap gap-4">
                 <Link
@@ -271,6 +292,62 @@ export const HomePage: React.FC = () => {
                   </div>
                 </div>
 
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Section: Dedicated Inspirational Quote (Motivational Core Mission Message) */}
+      <section className="relative py-16 sm:py-24 bg-[#F5EBDD] overflow-hidden border-y border-[#F2B94B]/35">
+        {/* Subtle decorative radial gradients */}
+        <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#F2B94B]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-[#17664C]/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative bg-white/85 backdrop-blur-sm rounded-3xl p-7 sm:p-12 lg:p-16 border-2 border-[#F2B94B]/60 shadow-soft text-center space-y-6">
+            
+            {/* Elegant Corner Accents (Saffron & Deep Green) */}
+            <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-[#F2B94B] rounded-tl-lg pointer-events-none" />
+            <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-[#F2B94B] rounded-tr-lg pointer-events-none" />
+            <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-[#17664C] rounded-bl-lg pointer-events-none" />
+            <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-[#17664C] rounded-br-lg pointer-events-none" />
+
+            {/* Subtle quotation-mark design */}
+            <div className="flex justify-center">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#F2B94B]/20 border border-[#F2B94B]/80 flex items-center justify-center shadow-sm">
+                <Quote className="w-7 h-7 sm:w-8 sm:h-8 fill-[#D89A35]/30 text-[#D89A35]" />
+              </div>
+            </div>
+
+            {/* Inspirational Badge */}
+            <div>
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-[#17664C]/10 text-[#17664C] border border-[#17664C]/25">
+                <Sparkles className="w-3.5 h-3.5 text-[#D89A35]" />
+                <span>मानव सेवा का पावन प्रेरक संदेश</span>
+              </span>
+            </div>
+
+            {/* Full Motivational Message without modification */}
+            <blockquote className="max-w-4xl mx-auto px-2">
+              <p className="text-[clamp(1.35rem,2.5vw,2.25rem)] font-serif font-bold text-[#174B3B] leading-[1.75] sm:leading-[1.8] tracking-normal">
+                "{foundationData.quote}"
+              </p>
+            </blockquote>
+
+            {/* Attribution & Dual Taglines */}
+            <div className="pt-5 border-t border-[#F2B94B]/40 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 text-stone-700">
+              <div className="flex items-center gap-2 font-bold text-stone-900 text-base sm:text-[17px] font-serif">
+                <span>— {foundationData.hindiName}</span>
+                <span className="text-[#D89A35] font-normal">|</span>
+                <span className="text-[#174B3B] font-semibold">{foundationData.president.hindiName} ({foundationData.president.hindiTitle})</span>
+              </div>
+              <div className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-stone-300" />
+              <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-[#17664C]">
+                <span>{foundationData.tagline1}</span>
+                <span className="text-[#D89A35]">•</span>
+                <span>{foundationData.tagline2}</span>
               </div>
             </div>
 
@@ -583,8 +660,8 @@ export const HomePage: React.FC = () => {
           <span className="text-xs sm:text-sm font-bold uppercase tracking-widest bg-brand-green-950 text-brand-gold-300 px-4 py-1.5 rounded-full">
             मानवता की सेवा में सहभागिता
           </span>
-          <h2 className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-serif font-bold text-brand-green-950 max-w-3xl mx-auto leading-[1.3]">
-            "अपने लिए तो सब जीते हैं, किसी और के लिए जी कर तो देखो..."
+          <h2 className="text-[clamp(1.5rem,2.8vw,2.35rem)] font-serif font-bold text-brand-green-950 max-w-4xl mx-auto leading-[1.6]">
+            "{foundationData.quote}"
           </h2>
           <p className="text-[clamp(1.0625rem,1.2vw,1.25rem)] max-w-2xl mx-auto text-brand-green-900 font-medium leading-[1.8]">
             {foundationData.hindiName} के साथ जुड़कर अपने गाँव और समाज के जरूरतमंदों की सेवा में अपना योगदान दें। आपका थोड़ा सा समय किसी के जीवन में नई रोशनी ला सकता है।
