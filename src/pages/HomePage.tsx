@@ -21,6 +21,7 @@ import { VolunteerModal } from '../components/VolunteerModal';
 import { foundationData } from '../data/foundationData';
 import { servicesData } from '../data/servicesData';
 import { activitiesData } from '../data/activitiesData';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export const HomePage: React.FC = () => {
   const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
@@ -133,7 +134,7 @@ export const HomePage: React.FC = () => {
                 {/* Hero Cinematic Image */}
                 <div className="relative rounded-2xl overflow-hidden border-2 border-brand-gold-400/50 shadow-lg aspect-[16/9] bg-stone-900 group">
                   <img
-                    src="/images/foundation/01-homepage-hero.webp"
+                    src={getAssetUrl("/images/foundation/01-homepage-hero.webp")}
                     alt="अध्यक्ष लोधी देवेंद्र सिंह ग्रामीणों एवं समाजसेवियों के साथ - लक्की अतुल्य फाउंडेशन"
                     className="w-full h-full object-cover object-right sm:object-center group-hover:scale-105 transition-transform duration-700"
                   />
@@ -429,7 +430,7 @@ export const HomePage: React.FC = () => {
             <div className="group bg-stone-50 rounded-3xl overflow-hidden border border-stone-200 shadow-soft hover:shadow-premium transition-all">
               <div className="relative aspect-[4/3] overflow-hidden bg-stone-200">
                 <img
-                  src="/images/foundation/12-process-request.webp"
+                  src={getAssetUrl("/images/foundation/12-process-request.webp")}
                   alt="चरण 1: सहायता अनुरोध एवं पंजीकरण - लक्की अतुल्य फाउंडेशन"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="eager"
@@ -455,7 +456,7 @@ export const HomePage: React.FC = () => {
             <div className="group bg-stone-50 rounded-3xl overflow-hidden border border-stone-200 shadow-soft hover:shadow-premium transition-all">
               <div className="relative aspect-[4/3] overflow-hidden bg-stone-200">
                 <img
-                  src="/images/foundation/13-process-coordination.webp"
+                  src={getAssetUrl("/images/foundation/13-process-coordination.webp")}
                   alt="चरण 2: सत्यापन एवं योजना समन्वय - लक्की अतुल्य फाउंडेशन"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="eager"
@@ -481,7 +482,7 @@ export const HomePage: React.FC = () => {
             <div className="group bg-stone-50 rounded-3xl overflow-hidden border border-stone-200 shadow-soft hover:shadow-premium transition-all">
               <div className="relative aspect-[4/3] overflow-hidden bg-stone-200">
                 <img
-                  src="/images/foundation/14-process-support.webp"
+                  src={getAssetUrl("/images/foundation/14-process-support.webp")}
                   alt="चरण 3: प्रत्यक्ष सहायता एवं राहत प्रदायगी - लक्की अतुल्य फाउंडेशन"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="eager"
@@ -511,7 +512,7 @@ export const HomePage: React.FC = () => {
       {/* Section: Why Support Our Foundation */}
       <section className="py-16 sm:py-24 bg-[#0E2E24] text-white relative overflow-hidden">
         {/* Subtle background visual */}
-        <div className="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" style={{ backgroundImage: "url('/images/foundation/11-why-choose-us.webp')" }} />
+        <div className="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" style={{ backgroundImage: `url('${getAssetUrl("/images/foundation/11-why-choose-us.webp")}')` }} />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -576,7 +577,7 @@ export const HomePage: React.FC = () => {
 
       {/* Section: Volunteer CTA Banner */}
       <section className="relative py-16 sm:py-24 bg-brand-gold-500 text-brand-green-950 overflow-hidden">
-        <div className="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none mix-blend-multiply" style={{ backgroundImage: "url('/images/foundation/17-contact-cta.webp')" }} />
+        <div className="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none mix-blend-multiply" style={{ backgroundImage: `url('${getAssetUrl("/images/foundation/17-contact-cta.webp")}')` }} />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="text-xs sm:text-sm font-bold uppercase tracking-widest bg-brand-green-950 text-brand-gold-300 px-4 py-1.5 rounded-full">

@@ -1,3 +1,5 @@
+import { getAssetUrl } from '../utils/assetHelper';
+
 export interface ServiceItem {
   id: string;
   slug: string;
@@ -22,7 +24,7 @@ export const servicesData: ServiceItem[] = [
     title: "Old Age & Widow Pension Assistance",
     hindiTitle: "वृद्धा एवं विधवा पेंशन सहायता",
     shortDesc: "पात्र वृद्ध नागरिकों एवं निराश्रित विधवा माताओं-बहनों को सरकारी पेंशन योजनाओं का मार्गदर्शन एवं आवेदन प्रक्रिया में निःशुल्क सहयोग।",
-    heroImage: "/images/foundation/03-old-age-widow-pension.webp",
+    heroImage: getAssetUrl("/images/foundation/03-old-age-widow-pension.webp"),
     iconName: "HeartHandshake",
     purpose: "ग्रामीण एवं कस्बाई अंचलों में कई वृद्ध एवं विधवा बहनें जानकारी के अभाव या तकनीकी जटिलताओं के कारण पेंशन योजनाओं से वंचित रह जाती हैं। फाउंडेशन का उद्देश्य इन पात्र नागरिकों को सही मार्गदर्शन और सहायता प्रदान करना है।",
     detailedIntro: [
@@ -56,7 +58,7 @@ export const servicesData: ServiceItem[] = [
     title: "Free Ambulance Service Coordination",
     hindiTitle: "निःशुल्क एम्बुलेंस सेवा",
     shortDesc: "गंभीर बीमारी, दुर्घटना अथवा आपात स्थिति में जरूरतमंद मरीजों को नजदीकी स्वास्थ्य केंद्र तक पहुंचाने हेतु एम्बुलेंस सहायता एवं समन्वय।",
-    heroImage: "/images/foundation/04-free-ambulance.webp",
+    heroImage: getAssetUrl("/images/foundation/04-free-ambulance.webp"),
     iconName: "Ambulance",
     purpose: "आपातकालीन समय में समय पर वाहन न मिल पाना किसी मरीज के लिए जानलेवा साबित हो सकता है। फाउंडेशन का उद्देश्य ग्रामीण क्षेत्रों के निर्धन मरीजों को अस्पताल तक पहुंचाने में यथासंभव निःशुल्क वाहन सुविधा उपलब्ध कराना है।",
     detailedIntro: [
@@ -86,7 +88,7 @@ export const servicesData: ServiceItem[] = [
     title: "Daughter's Marriage Assistance",
     hindiTitle: "कन्या विवाह सहयोग",
     shortDesc: "आर्थिक रूप से कमजोर परिवारों की बेटियों के विवाह हेतु आवश्यक सामग्री, उपहार एवं सामाजिक सहयोग प्रदान करना।",
-    heroImage: "/images/foundation/05-marriage-assistance.webp",
+    heroImage: getAssetUrl("/images/foundation/05-marriage-assistance.webp"),
     iconName: "Gift",
     purpose: "भारतीय समाज में कन्यादान को परम पुनीत कार्य माना गया है। किसी भी गरीब परिवार में बेटी का विवाह आर्थिक तंगी के कारण न रुके, इसी भावना से फाउंडेशन सहयोग प्रदान करता है।",
     detailedIntro: [
@@ -118,7 +120,7 @@ export const servicesData: ServiceItem[] = [
     title: "Community Social Welfare Initiatives",
     hindiTitle: "सामाजिक कार्यों में सहयोग",
     shortDesc: "सामुदायिक उत्थान, स्वच्छता, पर्यावरण संरक्षण, आपदा राहत एवं समाज के वंचित वर्गों के सशक्तिकरण में सक्रिय योगदान।",
-    heroImage: "/images/foundation/06-social-welfare.webp",
+    heroImage: getAssetUrl("/images/foundation/06-social-welfare.webp"),
     iconName: "Users",
     purpose: "समाज में एकता, समरसता और परस्पर सहयोग की भावना को सुदृढ़ करना तथा किसी भी सामाजिक विपत्ति या सामूहिक आवश्यकता में अग्रिम पंक्ति में खड़े होकर सेवा करना।",
     detailedIntro: [
@@ -148,7 +150,7 @@ export const servicesData: ServiceItem[] = [
     title: "Medical Treatment Assistance for Needy",
     hindiTitle: "जरूरतमंदों के उपचार हेतु सहयोग",
     shortDesc: "गंभीर बीमारियों से पीड़ित असहाय परिवारों को चिकित्सीय परामर्श, दवाओं की उपलब्धता एवं अस्पताल समन्वय में मानवीय सहयोग।",
-    heroImage: "/images/foundation/07-medical-assistance.webp",
+    heroImage: getAssetUrl("/images/foundation/07-medical-assistance.webp"),
     iconName: "Stethoscope",
     purpose: "कोई भी निर्धन नागरिक धन के अभाव में उचित चिकित्सा और जीवनरक्षक दवाओं से वंचित न रहे। मरीजों को सही स्वास्थ्य सुविधाएं दिलाने में सेतु का काम करना।",
     detailedIntro: [
@@ -180,7 +182,7 @@ export const servicesData: ServiceItem[] = [
     title: "Participation in Religious & Cultural Activities",
     hindiTitle: "विभिन्न धार्मिक कार्यों में सहभागिता",
     shortDesc: "धार्मिक आयोजनों, रामलीला, भागवत कथा, भंडारे, कांवड़ सेवा शिविर एवं सांस्कृतिक पर्वों में सहयोग एवं सेवा प्रबंधन।",
-    heroImage: "/images/foundation/08-religious-participation.webp",
+    heroImage: getAssetUrl("/images/foundation/08-religious-participation.webp"),
     iconName: "Sparkles",
     purpose: "भारतीय संस्कृति, सनातन संस्कारों और नैतिक मूल्यों का संरक्षण करना तथा धार्मिक उत्सवों में निःस्वार्थ सेवा, जल सेवा एवं प्रसाद वितरण की व्यवस्था करना।",
     detailedIntro: [
@@ -210,7 +212,7 @@ export const servicesData: ServiceItem[] = [
     title: "Gau Seva (Cow Care & Welfare)",
     hindiTitle: "गौ सेवा एवं संरक्षण",
     shortDesc: "निराश्रित एवं बीमार गौवंश की सेवा, हरा चारा-भूसा की व्यवस्था, घायल गायों का प्राथमिक उपचार एवं गौशालाओं में सहयोग।",
-    heroImage: "/images/foundation/09-cow-welfare.webp",
+    heroImage: getAssetUrl("/images/foundation/09-cow-welfare.webp"),
     iconName: "ShieldHeart",
     purpose: "गौ माता भारतीय संस्कृति का पूज्य प्रतीक हैं। सड़कों पर भटकती, दुर्घटनाग्रस्त अथवा बीमार गायों को संरक्षण, चिकित्सा और भोजन उपलब्ध कराना हमारा परम कर्तव्य है।",
     detailedIntro: [

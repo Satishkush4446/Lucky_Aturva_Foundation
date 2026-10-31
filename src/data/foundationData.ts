@@ -1,3 +1,5 @@
+import { getAssetUrl } from '../utils/assetHelper';
+
 export interface FoundationInfo {
   name: string;
   hindiName: string;
@@ -46,7 +48,7 @@ export const foundationData: FoundationInfo = {
     hindiName: "लोधी देवेंद्र सिंह",
     title: "President, Lucky Atulya Foundation",
     hindiTitle: "अध्यक्ष, लक्की अतुल्य फाउंडेशन",
-    image: "/images/foundation/02-president-portrait.webp",
+    image: getAssetUrl("/images/foundation/02-president-portrait.webp"),
     bio: "समाज के वंचित, निर्धन और जरूरतमंद बंधुओं की निःस्वार्थ सेवा के लिए समर्पित। जसराना एवं फिरोजाबाद क्षेत्र में मानव कल्याण, स्वास्थ्य सहायता, गौ सेवा एवं सामाजिक उत्थान के लिए निरंतर प्रयासरत।",
     message: "हमारा एकमात्र ध्येय यह सुनिश्चित करना है कि हमारे समाज में कोई भी वृद्ध अकेला न महसूस करे, किसी भी बहन-बेटी के विवाह में लाचारी आड़े न आए, गंभीर संकट के समय समय पर एम्बुलेंस सहायता पहुंचे और गौ माता की सेवा निष्ठा से हो सके। सेवा कोई उपकार नहीं, मानव जीवन का पवित्र कर्तव्य है।"
   },

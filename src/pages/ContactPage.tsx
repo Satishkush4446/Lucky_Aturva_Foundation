@@ -19,6 +19,7 @@ import {
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { foundationData } from '../data/foundationData';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +55,7 @@ export const ContactPage: React.FC = () => {
 
       {/* Hero Header */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#0E2E24] to-[#174B3B] text-white py-14 sm:py-20">
-        <div className="absolute inset-0 opacity-15 bg-cover bg-right pointer-events-none" style={{ backgroundImage: "url('/images/foundation/17-contact-cta.webp')" }} />
+        <div className="absolute inset-0 opacity-15 bg-cover bg-right pointer-events-none" style={{ backgroundImage: `url('${getAssetUrl("/images/foundation/17-contact-cta.webp")}')` }} />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: 'संपर्क करें' }]} />

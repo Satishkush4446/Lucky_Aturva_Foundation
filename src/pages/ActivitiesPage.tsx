@@ -15,6 +15,7 @@ import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { activitiesData } from '../data/activitiesData';
 import { foundationData } from '../data/foundationData';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export const ActivitiesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -78,7 +79,7 @@ export const ActivitiesPage: React.FC = () => {
               </div>
               <button
                 onClick={() => setActiveImageModal({
-                  image: '/images/foundation/master-collage-activities.webp',
+                  image: getAssetUrl('/images/foundation/master-collage-activities.webp'),
                   title: 'लक्की अतुल्य फाउंडेशन - समग्र सेवा गतिविधियाँ',
                   desc: 'वृद्धा/विधवा पेंशन, निःशुल्क एम्बुलेंस, कन्या विवाह सहयोग, स्वच्छता, चिकित्सा सहायता, गौ सेवा एवं धार्मिक भंडारा आयोजनों की सामूहिक झलकियां।',
                   notice: 'अध्यक्ष लोधी देवेंद्र सिंह जी एवं समर्पित स्वयंसेवकों की टीम द्वारा संचालित कार्य'
@@ -93,14 +94,14 @@ export const ActivitiesPage: React.FC = () => {
             <div 
               className="relative rounded-3xl overflow-hidden border-2 border-brand-gold-300/80 shadow-md group cursor-pointer aspect-[16/9] bg-stone-900"
               onClick={() => setActiveImageModal({
-                image: '/images/foundation/master-collage-activities.webp',
+                image: getAssetUrl('/images/foundation/master-collage-activities.webp'),
                 title: 'लक्की अतुल्य फाउंडेशन - समग्र सेवा गतिविधियाँ',
                 desc: 'वृद्धा/विधवा पेंशन, निःशुल्क एम्बुलेंस, कन्या विवाह सहयोग, स्वच्छता, चिकित्सा सहायता, गौ सेवा एवं धार्मिक भंडारा आयोजनों की सामूहिक झलकियां।',
                 notice: 'अध्यक्ष लोधी देवेंद्र सिंह जी एवं समर्पित स्वयंसेवकों की टीम द्वारा संचालित कार्य'
               })}
             >
               <img
-                src="/images/foundation/master-collage-activities.webp"
+                src={getAssetUrl("/images/foundation/master-collage-activities.webp")}
                 alt="लक्की अतुल्य फाउंडेशन समग्र सामाजिक गतिविधियां - अध्यक्ष लोधी देवेंद्र सिंह"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
               />
@@ -244,7 +245,7 @@ export const ActivitiesPage: React.FC = () => {
             <div className="lg:col-span-7">
               <div className="rounded-3xl overflow-hidden border-2 border-brand-gold-300 shadow-xl bg-stone-100">
                 <img
-                  src="/client-banner.jpg"
+                  src={getAssetUrl("/client-banner.jpg")}
                   alt="लक्की अतुर्वा फाउंडेशन परानपुर मोड़ जसराना"
                   className="w-full h-auto object-cover"
                 />

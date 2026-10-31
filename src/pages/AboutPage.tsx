@@ -20,6 +20,7 @@ import {
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { foundationData } from '../data/foundationData';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export const AboutPage: React.FC = () => {
   const coreValues = [
@@ -116,7 +117,7 @@ export const AboutPage: React.FC = () => {
               <div className="bg-[#F7F5EF] rounded-3xl p-5 sm:p-6 border border-stone-200 shadow-soft space-y-4">
                 <div className="overflow-hidden rounded-2xl border border-brand-gold-300/80 shadow-md aspect-[16/9] bg-stone-900 group">
                   <img
-                    src="/images/foundation/10-about-us.webp"
+                    src={getAssetUrl("/images/foundation/10-about-us.webp")}
                     alt="ग्रामीण समुदाय के साथ संवाद एवं सेवा - लक्की अतुल्य फाउंडेशन"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -135,7 +136,7 @@ export const AboutPage: React.FC = () => {
               <div className="bg-white rounded-2xl p-4 border border-stone-200 shadow-sm flex items-center gap-3.5">
                 <div className="w-22 h-16 rounded-xl overflow-hidden border border-brand-gold-400 shrink-0 shadow-sm">
                   <img
-                    src="/client-banner.jpg"
+                    src={getAssetUrl("/client-banner.jpg")}
                     alt="कार्यालय बोर्ड लक्की अतुल्य फाउंडेशन जसराना"
                     className="w-full h-full object-cover"
                   />
@@ -173,7 +174,7 @@ export const AboutPage: React.FC = () => {
 
             <div className="rounded-3xl overflow-hidden border-2 border-brand-gold-300 shadow-md aspect-[16/9] bg-stone-900">
               <img
-                src="/images/foundation/master-collage-activities.webp"
+                src={getAssetUrl("/images/foundation/master-collage-activities.webp")}
                 alt="लक्की अतुल्य फाउंडेशन कार्यक्षेत्र विहंगावलोकन"
                 className="w-full h-full object-cover"
               />

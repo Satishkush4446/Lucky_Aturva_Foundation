@@ -40,6 +40,8 @@ Thumbs.db
 /repro_*.png
 /opt_*.png
 /homepage.png
+/live_site_*.png
+check_live*.py
 /president-clean.jpg
 /president-portrait.jpg
 /client-banner.jpg

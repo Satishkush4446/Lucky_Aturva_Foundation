@@ -15,7 +15,7 @@ import { foundationData } from './data/foundationData';
 
 export const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen flex flex-col bg-[#F7F5EF] text-[#202A25]">
         {/* Top Contact & Language Bar */}
         <TopBar />

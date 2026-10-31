@@ -17,6 +17,7 @@ import { Breadcrumbs } from '../components/Breadcrumbs';
 import { ServiceCard } from '../components/ServiceCard';
 import { servicesData } from '../data/servicesData';
 import { foundationData } from '../data/foundationData';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export const ServicesPage: React.FC = () => {
   return (
@@ -96,7 +97,7 @@ export const ServicesPage: React.FC = () => {
             <div className="group bg-[#F7F5EF] rounded-3xl overflow-hidden border border-stone-200 shadow-soft hover:shadow-premium transition-all">
               <div className="relative aspect-[4/3] overflow-hidden bg-stone-200">
                 <img
-                  src="/images/foundation/12-process-request.webp"
+                  src={getAssetUrl("/images/foundation/12-process-request.webp")}
                   alt="चरण 1: संपर्क अथवा कार्यालय आगमन"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="eager"
@@ -118,7 +119,7 @@ export const ServicesPage: React.FC = () => {
             <div className="group bg-[#F7F5EF] rounded-3xl overflow-hidden border border-stone-200 shadow-soft hover:shadow-premium transition-all">
               <div className="relative aspect-[4/3] overflow-hidden bg-stone-200">
                 <img
-                  src="/images/foundation/13-process-coordination.webp"
+                  src={getAssetUrl("/images/foundation/13-process-coordination.webp")}
                   alt="चरण 2: दस्तावेज एवं स्थिति सत्यापन"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="eager"
@@ -140,7 +141,7 @@ export const ServicesPage: React.FC = () => {
             <div className="group bg-[#F7F5EF] rounded-3xl overflow-hidden border border-stone-200 shadow-soft hover:shadow-premium transition-all">
               <div className="relative aspect-[4/3] overflow-hidden bg-stone-200">
                 <img
-                  src="/images/foundation/14-process-support.webp"
+                  src={getAssetUrl("/images/foundation/14-process-support.webp")}
                   alt="चरण 3: मार्गदर्शन एवं प्रत्यक्ष सहयोग"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="eager"
