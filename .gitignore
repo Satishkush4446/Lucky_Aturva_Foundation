@@ -41,6 +41,7 @@ Thumbs.db
 /opt_*.png
 /homepage.png
 /live_site_*.png
+/live_production_*.png
 /slogan_*.png
 check_live*.py
 /president-clean.jpg
