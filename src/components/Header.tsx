@@ -25,39 +25,36 @@ export const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-brand-green-100 transition-all">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20 md:h-24">
+        <div className="flex items-center justify-between h-16 sm:h-20 md:h-22 gap-2 lg:gap-3">
           
           {/* Brand Logo & Name */}
-          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-gold-500 rounded-lg p-0.5 sm:p-1 min-w-0">
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-gold-500 rounded-lg p-0.5 sm:p-1 shrink-0">
             {/* Custom Emblem */}
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-brand-green-700 via-brand-green-800 to-brand-green-900 flex items-center justify-center p-0.5 shadow-md border-2 border-brand-gold-400 shrink-0 group-hover:scale-105 transition-transform">
-              <div className="w-full h-full rounded-full border border-brand-gold-300/40 flex flex-col items-center justify-center text-center p-0.5 sm:p-1 bg-brand-green-900/60">
-                <HeartHandshake className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-brand-gold-400" />
-                <span className="text-[6.5px] sm:text-[7px] text-brand-gold-200 tracking-tighter uppercase font-semibold">LAF</span>
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-brand-green-700 via-brand-green-800 to-brand-green-900 flex items-center justify-center p-0.5 shadow-md border-2 border-brand-gold-400 shrink-0 group-hover:scale-105 transition-transform">
+              <div className="w-full h-full rounded-full border border-brand-gold-300/40 flex flex-col items-center justify-center text-center p-0.5 bg-brand-green-900/60">
+                <HeartHandshake className="w-5 h-5 sm:w-6 sm:h-6 text-brand-gold-400" />
+                <span className="text-[6.5px] text-brand-gold-200 tracking-tighter uppercase font-semibold">LAF</span>
               </div>
             </div>
 
             {/* Typography */}
             <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="text-[17px] sm:text-xl md:text-2xl lg:text-[26px] font-serif font-bold text-brand-green-800 tracking-tight leading-tight group-hover:text-brand-green-900 transition-colors whitespace-nowrap">
+                <span className="text-[17px] sm:text-xl lg:text-[21px] xl:text-[23px] font-serif font-bold text-brand-green-800 tracking-tight leading-tight group-hover:text-brand-green-900 transition-colors whitespace-nowrap">
                   {foundationData.hindiName}
                 </span>
-                <span className="hidden sm:inline-block px-2 py-0.5 text-xs font-semibold bg-brand-gold-100 text-brand-gold-800 rounded-md border border-brand-gold-300">
+                <span className="hidden sm:inline-block px-1.5 py-0.5 text-[11px] font-bold bg-brand-gold-100 text-brand-gold-800 rounded border border-brand-gold-300 whitespace-nowrap">
                   जसराना
                 </span>
               </div>
-              <span className="text-[11.5px] sm:text-xs md:text-sm lg:text-[15px] font-semibold text-brand-muted tracking-wide leading-none whitespace-nowrap mt-0.5">
-                {foundationData.name}
-              </span>
-              <span className="text-xs text-brand-gold-700 font-semibold tracking-wider hidden xl:block mt-0.5">
-                {foundationData.tagline}
+              <span className="text-[11.5px] sm:text-[12px] lg:text-[13px] font-medium text-stone-500 tracking-wide leading-tight whitespace-nowrap mt-0.5">
+                {foundationData.contact.locality}, {foundationData.contact.tehsil}
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-3">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
             {navItems.map((item) => (
               <div 
                 key={item.path} 
@@ -68,16 +65,16 @@ export const Header: React.FC = () => {
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                    `px-3.5 xl:px-4 py-2 rounded-lg text-[16px] xl:text-[17px] font-semibold transition-colors flex items-center gap-1.5 ${
+                    `px-3 xl:px-4 py-2 rounded-xl text-[14.5px] xl:text-[16px] font-semibold transition-all whitespace-nowrap flex items-center gap-1.5 ${
                       isActive
-                        ? 'text-brand-green-700 bg-brand-green-50 font-bold border-b-2 border-brand-green-700'
-                        : 'text-brand-dark hover:text-brand-green-700 hover:bg-stone-50'
+                        ? 'text-brand-green-900 bg-brand-green-100/90 font-bold shadow-xs border border-brand-green-200/80'
+                        : 'text-stone-700 hover:text-brand-green-800 hover:bg-stone-100/80'
                     }`
                   }
                 >
-                  <span>{item.name}</span>
+                  <span className="whitespace-nowrap capitalize">{item.name}</span>
                   {item.hasDropdown && (
-                    <ChevronDown className="w-4 h-4 text-stone-400 transition-transform group-hover:rotate-180" />
+                    <ChevronDown className="w-3.5 h-3.5 text-stone-400 transition-transform group-hover:rotate-180" />
                   )}
                 </NavLink>
 
@@ -126,17 +123,17 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* Right Action Buttons & Mobile Hamburger */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
             {/* Direct Call Button */}
             <a
               href={`tel:${foundationData.contact.phone}`}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-[15px] font-bold bg-brand-green-700 text-white hover:bg-brand-green-800 shadow-sm hover:shadow transition-all shrink-0"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs sm:text-sm xl:text-[15px] font-bold bg-brand-green-700 text-white hover:bg-brand-green-800 shadow-sm hover:shadow transition-all shrink-0"
               title="फाउंडेशन को सीधे कॉल करें"
             >
-              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-gold-300" />
-              <span className="hidden sm:inline">कॉल करें:</span>
-              <span className="hidden sm:inline">7505082602</span>
-              <span className="sm:hidden font-bold">कॉल करें</span>
+              <Phone className="w-3.5 h-3.5 text-brand-gold-300" />
+              <span className="hidden xl:inline">कॉल:</span>
+              <span className="hidden xl:inline">7505082602</span>
+              <span className="xl:hidden font-bold">कॉल करें</span>
             </a>
 
             {/* WhatsApp CTA */}
@@ -144,7 +141,7 @@ export const Header: React.FC = () => {
               href={`https://wa.me/${foundationData.contact.whatsapp}?text=${encodeURIComponent('नमस्ते लक्की अतुर्वा फाउंडेशन, मुझे आपकी सेवाओं एवं सहयोग के संबंध में जानकारी चाहिए।')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 sm:py-2.5 rounded-full text-sm sm:text-[16px] font-bold bg-[#25D366] text-white hover:bg-[#1EBE5D] shadow-sm hover:shadow transition-all"
+              className="hidden xl:inline-flex items-center gap-1.5 px-3.5 xl:px-4 py-2 rounded-full text-xs sm:text-sm xl:text-[15px] font-bold bg-[#25D366] text-white hover:bg-[#1EBE5D] shadow-sm hover:shadow transition-all shrink-0"
               title="सीधे व्हाट्सएप पर संपर्क करें"
             >
               <MessageCircle className="w-4 h-4" />
